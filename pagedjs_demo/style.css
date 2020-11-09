@@ -1,3 +1,58 @@
 @page{
-	size: A5;
+	size: 100mm 200mm;
+	margin-top: 1cm;
+	margin-bottom: 1cm;
+	margin-left: 1cm;
+	margin-right: 1cm;
+	@top-left{
+		content:"..............";
+		color: red;
+		font-size: 10px;
+	}
+	@bottom-left{
+		content:"..............";
+	}
 }
+
+@page:left{
+	margin-right: 2cm;
+	@bottom-left-corner{
+		content: counter(page);
+		font-family: sans-serif;
+		font-size: 30px;
+		color: blue;
+	}
+}
+
+@page:right{
+	margin-left: 2cm;
+	@bottom-right-corner{
+		content: counter(page);
+		font-family: sans-serif;
+		font-size: 30px;
+		color: blue;
+	}
+}
+
+h3{
+	break-before: right;
+	/*page-break-before: always;*/
+	/*page-break-after: always;*/
+	/*page-break-inside: avoid;*/
+}
+
+img{
+	width:100%;
+	page-break-inside: avoid;
+	page-break-before: always;
+	page-break-after: always;
+}
+
+.pagedjs_blank_page{
+	background-color: yellow;
+}
+
+
+
+
+
